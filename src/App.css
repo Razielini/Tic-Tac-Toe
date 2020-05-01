@@ -1,3 +1,14 @@
+.square:focus {
+  outline: none;
+}
+
+/* BOARD */
+.border-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 .App {
   text-align: center;
 }
