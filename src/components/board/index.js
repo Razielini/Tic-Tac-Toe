@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Square from '../square-button/index.js'
+import Square from '../square-button/'
 
 export default class Board extends Component {
-  renderSquare(i) {
+  renderSquare (i) {
     return <Square
-              value={this.props.squares[i]}
-              onClick={() => this.props.onClick(i)}
+            value={ this.props.squares[i] }
+            onClick={ () => this.props.onClick(i) }
           />
   }
 
@@ -18,14 +18,14 @@ export default class Board extends Component {
           { this.renderSquare(2) }
         </div>
         <div className="border-row">
+          { this.renderSquare(3) }
           { this.renderSquare(4) }
           { this.renderSquare(5) }
-          { this.renderSquare(6) }
         </div>
         <div className="border-row">
+          { this.renderSquare(6) }
           { this.renderSquare(7) }
           { this.renderSquare(8) }
-          { this.renderSquare(9) }
         </div>
       </div>
     )
